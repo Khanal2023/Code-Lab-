@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A lightweight browser-based HTML, CSS and JavaScript playground created by Devendra Khanal.">
+  <title>Devendra Code Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Devendra Code Lab home">
+      <span class="brand-mark">DK</span>
+      <span>
+        <strong>Devendra Code Lab</strong>
+        <small>HTML, CSS & JavaScript Playground</small>
+      </span>
+    </a>
+
+    <div class="top-actions">
+      <span class="status" id="status-text"><span class="status-dot"></span> Ready</span>
+      <button class="button button-secondary" id="clear-btn" type="button">Clear</button>
+      <button class="button button-primary" id="run-btn" type="button">
+        <span aria-hidden="true">▶</span> Run Code
+      </button>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <section class="intro" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">FRONTEND PLAYGROUND</p>
+        <h1 id="page-title">Build small ideas directly in your browser.</h1>
+        <p>Write HTML, style it with CSS, add JavaScript, and preview everything instantly. Your work is saved automatically in this browser.</p>
+      </div>
+      <div class="shortcut-card" aria-label="Keyboard shortcut">
+        <span>Quick run</span>
+        <kbd>Ctrl</kbd><span>+</span><kbd>Enter</kbd>
+      </div>
+    </section>
+
+    <section class="editor-shell" aria-label="Code editor workspace">
+      <div class="panel-heading">
+        <div>
+          <h2>Code Workspace</h2>
+          <p>Edit the files below and run your project.</p>
+        </div>
+        <span class="save-note" id="save-note">Saved locally</span>
+      </div>
+
+      <div class="editor-tabs" role="tablist" aria-label="Code language tabs">
+        <button class="tab active" type="button" role="tab" aria-selected="true" data-editor="html-panel">
+          <span class="file-dot html-dot"></span> index.html
+        </button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-editor="css-panel">
+          <span class="file-dot css-dot"></span> styles.css
+        </button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-editor="js-panel">
+          <span class="file-dot js-dot"></span> script.js
+        </button>
+      </div>
+
+      <div class="editors">
+        <article class="code-editor active" id="html-panel" data-language="HTML">
+          <div class="editor-label"><span>HTML</span><small>Structure</small></div>
+          <textarea id="html-code" aria-label="HTML code" spellcheck="false" placeholder="Write your HTML here..."></textarea>
+        </article>
+
+        <article class="code-editor" id="css-panel" data-language="CSS">
+          <div class="editor-label"><span>CSS</span><small>Style</small></div>
+          <textarea id="css-code" aria-label="CSS code" spellcheck="false" placeholder="Write your CSS here..."></textarea>
+        </article>
+
+        <article class="code-editor" id="js-panel" data-language="JavaScript">
+          <div class="editor-label"><span>JavaScript</span><small>Interaction</small></div>
+          <textarea id="js-code" aria-label="JavaScript code" spellcheck="false" placeholder="Write your JavaScript here..."></textarea>
+        </article>
+      </div>
+    </section>
+
+    <section class="preview-shell" aria-labelledby="preview-title">
+      <div class="preview-heading">
+        <div>
+          <h2 id="preview-title">Live Preview</h2>
+          <p>Your result appears here after running the code.</p>
+        </div>
+        <button class="icon-button" id="refresh-btn" type="button" aria-label="Refresh preview" title="Refresh preview">↻</button>
+      </div>
+      <div class="browser-bar" aria-hidden="true">
+        <div class="browser-dots"><span></span><span></span><span></span></div>
+        <div class="address-bar">devendra-code-lab.local/preview</div>
+      </div>
+      <iframe id="output" title="Code output preview" sandbox="allow-scripts allow-modals"></iframe>
+    </section>
+  </main>
+
+  <footer>
+    <p>Designed and built by <strong>Devendra Khanal</strong> · © 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
